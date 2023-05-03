@@ -1,6 +1,6 @@
 local JSLibK = loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/JS-HUB/main/Main')))()
 
-local Window = JSLibK:MakeWindow({Name = "JS-HUB", HidePremium = false, SaveConfig = false, ConfigFolder = "JSKEY", IntroEnabled = true, IntroText = "JS-STUDIO HUB"})
+local Window = JSLibK:MakeWindow({Name = "JS-HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "JSKEY", IntroEnabled = true, IntroText = "JS-STUDIO HUB"})
 
 --Valores
 
