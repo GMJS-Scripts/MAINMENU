@@ -43,7 +43,7 @@ local section1 = tab:AddSection({
 tab:AddTextbox({
 	Name = "Enter Key",
 	Default = "",
-	TextDisappear = true,
+	TextDisappear = false,
 	Callback = function(Value)
 		_G.KeyInput = Value
 	end	  
