@@ -1,0 +1,65 @@
+local JSLibK = loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/JS-HUB/main/Main')))()
+
+local Window = JSLibK:MakeWindow({Name = "JS-HUB", HidePremium = false, SaveConfig = false, ConfigFolder = "JSKEY", IntroEnabled = true, IntroText = "JS-STUDIO HUB"})
+
+--Valores
+
+_G.Key = "JSKey1"
+_G.KeyInput = "string"
+_G.KeySuccess = false
+
+--Funções
+
+function CorrectKey()
+	JSLibK:MakeNotification({
+		Name = "Key!",
+		Content = "You have entered the correct key!",
+		Image = "",
+		Time = 4
+	})
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/MAINMENU/main/JS-HUB')))()
+	function IncorrectKey()
+		JSLibKKey:MakeNotification({
+			Name = "Key!",
+			Content = "This key is Expired/Invalid!!",
+			Image = "",
+			Time = 2
+		})
+		end
+	end
+local tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "",
+	PremiumOnly = false
+})
+
+
+local section1 = tab:AddSection({
+	Name = "Key"
+})
+
+tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+tab:AddButton({
+	Name = "Check Key!",
+	Callback = function()
+		if _G.KeySuccess == false then
+            if _G.KeyInput == _G.Key then                
+                wait(0.5)
+                CorrectKey()
+				_G.KeySuccess = true
+				wait(3)
+				JSLibK:Destroy()
+			else
+				IncorrectKey()
+            end
+		end
+  	end    
+})
