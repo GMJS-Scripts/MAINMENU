@@ -4,7 +4,7 @@ local Window = JSLibK:MakeWindow({Name = "JS-HUB", HidePremium = false, SaveConf
 
 --Valores
 
-_G.Key = "JSKey1"
+_G.Key = "Teste"
 _G.KeyInput = "string"
 _G.KeySuccess = false
 
@@ -18,15 +18,16 @@ function CorrectKey()
 		Time = 4
 	})
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/MAINMENU/main/JS-HUB')))()
+end
 	function IncorrectKey()
-		JSLibKKey:MakeNotification({
+		JSLibK:MakeNotification({
 			Name = "Key!",
 			Content = "This key is Expired/Invalid!!",
 			Image = "",
 			Time = 2
 		})
-		end
 	end
+
 local tab = Window:MakeTab({
 	Name = "Key",
 	Icon = "",
