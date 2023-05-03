@@ -4,7 +4,7 @@ local Window = JSLibK:MakeWindow({Name = "JS-HUB", HidePremium = false, SaveConf
 
 --Valores
 
-_G.Key = "Teste"
+_G.Key = "gamermaxjs"
 _G.KeyInput = "string"
 _G.KeySuccess = false
 
@@ -17,6 +17,7 @@ function CorrectKey()
 		Image = "",
 		Time = 4
 	})
+	wait(2)
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/MAINMENU/main/JS-HUB')))()
 end
 	function IncorrectKey()
