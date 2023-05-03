@@ -1,0 +1,14 @@
+local JSLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/JS-HUB/main/Main')))()
+if game.PlaceId == 8425128940 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/GMJS-Scripts/AWS2/main/Main')))()
+    elseif game.PlaceId == 0 then
+    loadstring(game:HttpGet(('')))()
+        else
+    JSLib:MakeNotification({
+	Name = "Warn!!",
+	Content = "JS-HUB DOES NOT SUPPORT THIS GAME!!!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+
